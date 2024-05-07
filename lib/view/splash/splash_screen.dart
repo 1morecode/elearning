@@ -1,7 +1,7 @@
 //*************   © Copyrighted by 1 More Code. *********************
 
 import 'package:elearning/config/assets.dart';
-import 'package:elearning/view/onboarding/onboarding_screen.dart';
+import 'package:elearning/view/onboarding/intro_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       print("Delay Completed");
       Navigator.pushAndRemoveUntil(context,
-          MaterialPageRoute(builder: (context) => const OnBoardingScreen(),), (
+          MaterialPageRoute(builder: (context) => const IntroScreen(),), (
               route) => false);
     });
   }
