@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
+  static TextEditingController mobileController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +46,8 @@ class LoginScreen extends StatelessWidget {
                         color: Colors.black54),
                   ),
                 ),
-                const CupertinoTextField(
+                CupertinoTextField(
+                  controller: mobileController,
                   placeholder: "Enter Mobile Number",
                 ),
                 const SizedBox(
@@ -55,7 +58,11 @@ class LoginScreen extends StatelessWidget {
                     Expanded(
                         child: MaterialButton(
                       onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const OTPScreen(),));
+                        if(mobileController.text.length == 10){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => OTPScreen(mobile: mobileController.text,),));
+                        }else{
+                          print("Please enter valid mobile no.");
+                        }
                       },
                       height: 45,
                       elevation: 1,

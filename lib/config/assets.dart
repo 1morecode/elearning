@@ -5,6 +5,7 @@ String mediumLogo = "assets/logo/logo_256.png";
 
 
 String loginImage = "assets/images/login.png";
+String otpImage = "assets/images/otp.png";
 String googleIcon = "assets/icons/google.png";
 
 String onBoard1 = "assets/onboard/1.png";
