@@ -1,4 +1,4 @@
-import 'package:elearning/view/home/home_screen.dart';
+import 'package:elearning/view/dashboard/dashboard_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -154,7 +154,7 @@ class RegistrationScreen extends StatelessWidget {
                     Navigator.pushAndRemoveUntil(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const DashboardScreen(),
                         ),
                         (route) => false);
                   } else {
