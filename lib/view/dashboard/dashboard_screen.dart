@@ -27,10 +27,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   List<Widget> appbarTitles = [
     Image.asset(hrLogo, height: 40,),
-    Text("Download"),
-    Text("Search"),
-    Text("Community"),
-    Text("Setting"),
+    const Text("Download"),
+    const Text("Search"),
+    const Text("Community"),
+    const Text("Setting"),
   ];
 
   @override
