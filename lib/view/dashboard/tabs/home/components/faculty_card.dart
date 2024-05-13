@@ -2,6 +2,7 @@
 // Created by 1 More Code on 11/05/24.
 //
 
+import 'package:elearning/view/dashboard/tabs/faculty/faculty_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +16,9 @@ class FacultyCard extends StatelessWidget {
     return CupertinoButton(
       onPressed: (){
         print("Faculty Tapped");
+        Navigator.push(context, MaterialPageRoute(builder: (context) => FacultyScreen(faculty: faculty,),));
       },
-      padding: EdgeInsets.all(0),
+      padding: const EdgeInsets.all(0),
       child: SizedBox(
         width: 130,
         child: Card(

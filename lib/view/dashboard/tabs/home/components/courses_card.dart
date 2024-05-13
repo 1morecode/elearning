@@ -2,6 +2,7 @@
 // Created by 1 More Code on 09/05/24.
 //
 
+import 'package:elearning/view/dashboard/tabs/course/course_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,6 +16,7 @@ class CoursesCard extends StatelessWidget {
     return CupertinoButton(
       onPressed: (){
         print("Card Tapped");
+        Navigator.push(context, MaterialPageRoute(builder: (context) => CourseScreen(courseData: course,),));
       },
       padding: const EdgeInsets.all(0),
       child: SizedBox(
