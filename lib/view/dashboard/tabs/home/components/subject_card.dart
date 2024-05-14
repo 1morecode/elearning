@@ -2,6 +2,7 @@
 // Created by 1 More Code on 11/05/24.
 //
 
+import 'package:elearning/view/dashboard/subject/subject_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +21,8 @@ class SubjectCard extends StatelessWidget {
       ),
       child: CupertinoButton(
         onPressed: (){
-          print("Faculty Tapped");
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SubjectScreen(subject: subject,),));
+          print("Subject Tapped");
         },
         padding: const EdgeInsets.all(0),
         child: Padding(

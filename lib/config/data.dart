@@ -40,10 +40,76 @@ class UniData {
   ];
 
   static List<dynamic> branches = [
-    {"branch": "Computer Science & Engineering", "courseId": "001", "icon": Icons.bookmarks_outlined},
-    {"courseId": "001", "branch": "Electrical Engineering", "icon": Icons.bookmarks_outlined},
-    {"courseId": "002", "branch": "Mechanical Engineering", "icon": Icons.bookmarks_outlined},
-    {"courseId": "003", "branch": "Physics Engineering", "icon": Icons.bookmarks_outlined}
+    {
+      "id": "101",
+      "branch": "Computer Science & Engineering",
+      "courseId": "001",
+      "icon": Icons.bookmarks_outlined,
+      "years": [
+        {
+          "year": "1st Yr",
+          "semesters": [
+            {"id": "501", "semester": "Semester 1"},
+            {"id": "502", "semester": "Semester 2"}
+          ]
+        },
+        {
+          "year": "2nd Yr",
+          "semesters": [
+            {"id": "503", "semester": "Semester 3"},
+            {"id": "504", "semester": "Semester 4"}
+          ]
+        },
+        {
+          "year": "3rd Yr",
+          "semesters": [
+            {"id": "505", "semester": "Semester 5"},
+            {"id": "506", "semester": "Semester 6"}
+          ]
+        },
+        {
+          "year": "4th Yr",
+          "semesters": [
+            {"id": "507", "semester": "Semester 7"},
+            {"id": "508", "semester": "Semester 8"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "courseId": "001",
+      "branch": "Electrical Engineering",
+      "icon": Icons.bookmarks_outlined,
+      "years": [
+        {
+          "year": "1st Yr",
+          "semesters": [
+            {"id": "501", "semester": "Semester 1"},
+            {"id": "502", "semester": "Semester 2"}
+          ]
+        },
+        {
+          "year": "2nd Yr",
+          "semesters": [
+            {"id": "503", "semester": "Semester 3"},
+            {"id": "504", "semester": "Semester 4"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "103",
+      "courseId": "002",
+      "branch": "Mechanical Engineering",
+      "icon": Icons.bookmarks_outlined,
+    },
+    {
+      "id": "104",
+      "courseId": "003",
+      "branch": "Physics Engineering",
+      "icon": Icons.bookmarks_outlined,
+    }
   ];
 
   static List<dynamic> popularSubjects = [
@@ -52,9 +118,9 @@ class UniData {
       "icon": Icons.menu_book,
       "courseId": "001",
       "branchId": "101",
+      "semesterId": "501",
       "facultyId": "301",
       "year": 1,
-      "semester": 1
     },
     {
       "subject": "Data Structure",
@@ -63,7 +129,7 @@ class UniData {
       "branchId": "101",
       "facultyId": "301",
       "year": 1,
-      "semester": 1
+      "semesterId": "502",
     },
     {
       "subject": "Advance Algorithm",
@@ -72,7 +138,7 @@ class UniData {
       "branchId": "101",
       "facultyId": "302",
       "year": 1,
-      "semester": 1
+      "semesterId": "501",
     },
     {
       "subject": "Mechanics",
@@ -81,7 +147,7 @@ class UniData {
       "branchId": "101",
       "facultyId": "302",
       "year": 1,
-      "semester": 1
+      "semesterId": "502",
     },
     {
       "subject": "Artificial Intelligence",
@@ -90,7 +156,7 @@ class UniData {
       "branchId": "101",
       "facultyId": "303",
       "year": 1,
-      "semester": 1
+      "semesterId": "503",
     },
     {
       "subject": "Machine Learning",
@@ -99,7 +165,7 @@ class UniData {
       "branchId": "101",
       "facultyId": "304",
       "year": 1,
-      "semester": 1
+      "semesterId": "504",
     }
   ];
 
@@ -111,7 +177,8 @@ class UniData {
           "https://www.thelittlehawk.com/wp-content/uploads/2018/10/IMG-1246-900x675.jpg",
       "department": "Mechanical",
       "followers": 104,
-      "bio": "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
+      "bio":
+          "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
     },
     {
       "id": "302",
@@ -120,7 +187,8 @@ class UniData {
           "https://www.livelingua.com/img/profilesTeachers/103/Guillaume-Deneufbourg-Square_Profile_S.jpg",
       "department": "Electrical",
       "followers": 104,
-      "bio": "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
+      "bio":
+          "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
     },
     {
       "id": "303",
@@ -129,7 +197,8 @@ class UniData {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAQ6V9Oj7MV85EdzqAOCPAGDFfdBzugWQwZQgnnqSac0ENUX4bapOH8QfsFkwuWOt2CY0&usqp=CAU",
       "department": "CSE",
       "followers": 104,
-      "bio": "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
+      "bio":
+          "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
     },
     {
       "id": "304",
@@ -138,7 +207,8 @@ class UniData {
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4ycQKueb-YzYMcMAF4OSsZMF-xEHlw_2SWTICYJfaPYmEK1rH_mnLybkif0qO996aQII&usqp=CAU",
       "department": "Mechanical",
       "followers": 104,
-      "bio": "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
+      "bio":
+          "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
     }
   ];
 }

@@ -2,6 +2,7 @@
 // Created by 1 More Code on 13/05/24.
 //
 
+import 'package:elearning/view/dashboard/course/branch/branch_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,7 @@ class _BranchCardState extends State<BranchCard> {
       ),
       child: CupertinoButton(
         onPressed: (){
-          print("Branch Tapped");
+          Navigator.push(context, MaterialPageRoute(builder: (context) => BranchScreen(branch: widget.branch,),));
         },
         padding: const EdgeInsets.all(0),
         child: Padding(

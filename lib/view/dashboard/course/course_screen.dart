@@ -3,8 +3,9 @@
 //
 
 import 'package:elearning/config/data.dart';
-import 'package:elearning/view/dashboard/tabs/course/components/branch_card.dart';
 import 'package:flutter/material.dart';
+
+import 'components/branch_card.dart';
 
 class CourseScreen extends StatelessWidget {
   final dynamic courseData;

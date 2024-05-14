@@ -2,9 +2,10 @@
 // Created by 1 More Code on 09/05/24.
 //
 
-import 'package:elearning/view/dashboard/tabs/course/course_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../../course/course_screen.dart';
 
 class CoursesCard extends StatelessWidget {
   final dynamic course;

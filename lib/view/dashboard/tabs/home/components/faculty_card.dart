@@ -2,9 +2,10 @@
 // Created by 1 More Code on 11/05/24.
 //
 
-import 'package:elearning/view/dashboard/tabs/faculty/faculty_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import '../../../faculty/faculty_screen.dart';
 
 class FacultyCard extends StatelessWidget {
   final dynamic faculty;

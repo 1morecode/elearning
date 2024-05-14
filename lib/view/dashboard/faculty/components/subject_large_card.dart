@@ -5,6 +5,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../subject/subject_screen.dart';
+
 class SubjectLargeCard extends StatelessWidget {
   final dynamic subject;
   const SubjectLargeCard({super.key, this.subject});
@@ -20,6 +22,7 @@ class SubjectLargeCard extends StatelessWidget {
       ),
       child: CupertinoButton(
         onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => SubjectScreen(subject: subject,),));
           print("Subject Tapped");
         },
         padding: const EdgeInsets.all(0),

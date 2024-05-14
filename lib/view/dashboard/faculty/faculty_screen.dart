@@ -3,9 +3,10 @@
 //
 
 import 'package:elearning/config/data.dart';
-import 'package:elearning/view/dashboard/tabs/faculty/components/subject_large_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'components/subject_large_card.dart';
 
 class FacultyScreen extends StatelessWidget {
   final dynamic faculty;
