@@ -2,8 +2,16 @@
 // Created by 1 More Code on 09/05/24.
 //
 
+import 'dart:async';
+import 'dart:io';
+import 'dart:typed_data';
+
+
+import 'package:elearning/model/note_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 
 class UniData {
   static List<dynamic> courses = [
@@ -114,6 +122,7 @@ class UniData {
 
   static List<dynamic> popularSubjects = [
     {
+      "id": "601",
       "subject": "Electronics & Communication",
       "icon": Icons.menu_book,
       "courseId": "001",
@@ -123,6 +132,7 @@ class UniData {
       "year": 1,
     },
     {
+      "id": "602",
       "subject": "Data Structure",
       "icon": Icons.menu_book,
       "courseId": "001",
@@ -132,6 +142,7 @@ class UniData {
       "semesterId": "502",
     },
     {
+      "id": "603",
       "subject": "Advance Algorithm",
       "icon": Icons.menu_book,
       "courseId": "002",
@@ -141,6 +152,7 @@ class UniData {
       "semesterId": "501",
     },
     {
+      "id": "604",
       "subject": "Mechanics",
       "icon": Icons.menu_book,
       "courseId": "003",
@@ -150,6 +162,7 @@ class UniData {
       "semesterId": "502",
     },
     {
+      "id": "605",
       "subject": "Artificial Intelligence",
       "icon": Icons.menu_book,
       "courseId": "002",
@@ -159,6 +172,7 @@ class UniData {
       "semesterId": "503",
     },
     {
+      "id": "606",
       "subject": "Machine Learning",
       "icon": Icons.menu_book,
       "courseId": "003",
@@ -167,6 +181,42 @@ class UniData {
       "year": 1,
       "semesterId": "504",
     }
+  ];
+
+  static List<Note> notesList = [
+    Note(
+        id: "701",
+        subjectId: "601",
+        title: "Electronics - Unit 1",
+        views: 234,
+        file: "https://pages.uoregon.edu/rayfrey/DigitalNotes.pdf",
+        pages: 12,
+        thumbnail:
+            "https://handwrittennotes.in/wp-content/uploads/2022/03/Screenshot-368-1.png",
+        unit: "UNIT 1",
+        writer: "Ashish Kumar"),
+    Note(
+        id: "702",
+        subjectId: "601",
+        title: "Electronics - Unit 2",
+        views: 234,
+        file: "https://pages.uoregon.edu/rayfrey/DigitalNotes.pdf",
+        pages: 12,
+        thumbnail:
+            "https://imgv2-2-f.scribdassets.com/img/document/392171919/original/e45aaffddf/1715353775?v=1",
+        unit: "UNIT 2",
+        writer: "Ashish Kumar"),
+    Note(
+        id: "703",
+        subjectId: "601",
+        title: "Electronics - Unit 3",
+        views: 234,
+        file: "https://pages.uoregon.edu/rayfrey/DigitalNotes.pdf",
+        pages: 12,
+        thumbnail:
+            "https://shop.handwrittennotes.in/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-30-at-7.48.03-PM-2.jpeg",
+        unit: "UNIT 3",
+        writer: "Ashish Kumar")
   ];
 
   static List<dynamic> topFaculties = [
@@ -211,4 +261,19 @@ class UniData {
           "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
     }
   ];
+}
+
+Future<File?> urlToFile(String imageUrl) async {
+  File? file;
+  try {
+    var ff = "subject";
+    Directory tempDir = await getTemporaryDirectory();
+    String tempPath = tempDir.path;
+    file = File('$tempPath/$ff.pdf');
+    http.Response response = await http.get(Uri.parse(imageUrl));
+    await file.writeAsBytes(response.bodyBytes);
+  } catch (e) {
+    print(e);
+  }
+  return file;
 }
