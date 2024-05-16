@@ -14,8 +14,10 @@ class NotesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-      itemBuilder: (context, index) => NoteCard(note: UniData.notesList[index]),
-      itemCount: UniData.notesList.length,
+      itemBuilder: (context, index) => NoteCard(
+          note: UniData.notesList
+              .where((element) => element.subjectId == subject['id']).toList()[index]),
+      itemCount: UniData.notesList.where((element) => element.subjectId == subject['id']).toList().length,
       separatorBuilder: (context, index) => Divider(
         color: Colors.grey.withOpacity(0.2),
       ),

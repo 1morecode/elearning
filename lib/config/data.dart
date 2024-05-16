@@ -6,8 +6,10 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-
+import 'package:elearning/model/book_model.dart';
+import 'package:elearning/model/lecture.dart';
 import 'package:elearning/model/note_model.dart';
+import 'package:elearning/model/pape.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -217,6 +219,122 @@ class UniData {
             "https://shop.handwrittennotes.in/wp-content/uploads/2022/12/WhatsApp-Image-2022-12-30-at-7.48.03-PM-2.jpeg",
         unit: "UNIT 3",
         writer: "Ashish Kumar")
+  ];
+
+  static List<Book> booksList = [
+    Book(
+        id: "801",
+        subjectId: "601",
+        title: "Electronics & Communication (2021)",
+        views: 234,
+        file: "https://pages.uoregon.edu/rayfrey/DigitalNotes.pdf",
+        pages: 12,
+        thumbnail:
+            "https://rukminim2.flixcart.com/image/850/1000/book/5/5/6/basic-electronics-solid-state-reprint-edn-2006-edition-original-imadwu85tdrgy2ft.jpeg?q=90&crop=false",
+        seller: "UNIT 1",
+        writer: "Ashish Kumar"),
+    Book(
+        id: "802",
+        subjectId: "601",
+        title: "Electronics & Communication (2022)",
+        views: 234,
+        file: "https://pages.uoregon.edu/rayfrey/DigitalNotes.pdf",
+        pages: 12,
+        thumbnail:
+            "https://m.media-amazon.com/images/I/714sQ795nCS._AC_UF1000,1000_QL80_DpWeblab_.jpg",
+        seller: "UNIT 2",
+        writer: "Ashish Kumar"),
+    Book(
+        id: "803",
+        subjectId: "601",
+        title: "Electronics & Communication (2023)",
+        views: 234,
+        file: "https://pages.uoregon.edu/rayfrey/DigitalNotes.pdf",
+        pages: 12,
+        thumbnail:
+            "https://m.media-amazon.com/images/I/41txu3s-PGL._SL500_.jpg",
+        seller: "UNIT 3",
+        writer: "Ashish Kumar")
+  ];
+
+  static List<Paper> papers = [
+    Paper(
+        subjectId: "601",
+        answer:
+            "https://www.aktuonline.com/btech/btech-oe-3-sem-digital-electronics-koe-039-2023.pdf",
+        question:
+            "https://www.aktuonline.com/btech/btech-cs-3-sem-computer-organization-and-architecture-kcs-302-2023.pdf",
+        year: "2023"),
+    Paper(
+        subjectId: "601",
+        answer:
+            "https://www.aktuonline.com/btech/btech-oe-3-sem-digital-electronics-koe-039-2023.pdf",
+        question:
+            "https://www.aktuonline.com/btech/btech-cs-3-sem-discrete-structures-theory-of-logic-kcs-303-2023.pdf",
+        year: "2022"),
+    Paper(
+        subjectId: "601",
+        answer:
+            "https://www.aktuonline.com/btech/btech-oe-3-sem-digital-electronics-koe-039-2023.pdf",
+        question:
+            "https://www.aktuonline.com/btech/btech-cs-3-sem-computer-organization-and-architecture-kcs-302-2023.pdf",
+        year: "2021"),
+    Paper(
+        subjectId: "601",
+        answer: "",
+        question:
+            "https://www.aktuonline.com/btech/btech-cs-3-sem-discrete-structures-theory-of-logic-kcs-303-2023.pdf",
+        year: "2020"),
+    Paper(
+        subjectId: "601",
+        answer:
+            "https://www.aktuonline.com/btech/btech-oe-3-sem-digital-electronics-koe-039-2023.pdf",
+        question:
+            "https://www.aktuonline.com/btech/btech-cs-3-sem-computer-organization-and-architecture-kcs-302-2023.pdf",
+        year: "2019"),
+  ];
+
+  static List<Lecture> lectures = [
+    Lecture(
+        heading: "Introduction",
+        videos: [
+          VideoModel(
+              thumbnail:
+                  "https://i.ytimg.com/vi/Vd2UJiIPbag/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAILcGSyDpy_qfAcdlYPPGPAI7UZg",
+              views: "123",
+              title: "Basic Electrical Engineering",
+              creator: "Umesh Dhande",
+              duration: const Duration(minutes: 40, seconds: 36),
+              url:
+                  "https://youtu.be/Vd2UJiIPbag?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc"),
+        ],
+        position: 1,
+        subjectId: "601"),
+    Lecture(
+        heading: "Fundamentals",
+        videos: [
+          VideoModel(
+              thumbnail:
+                  "https://i.ytimg.com/vi/FjaJEo7knF4/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCsSh_QrC4A2moKV_QIYSrnp67Dpw",
+              views: "123",
+              title: "DC Networks | Part 1 | OHM's Law & KVL (Lecture 01)",
+              creator: "Umesh Dhande",
+              duration: const Duration(minutes: 41, seconds: 31),
+              url:
+                  "https://youtu.be/FjaJEo7knF4?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc"),
+          VideoModel(
+              thumbnail:
+                  "https://i.ytimg.com/vi/LdMXFW3d_Mw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBwkCgoCXRbE6izutZU76sA_0m0pg",
+              views: "123",
+              title:
+                  "DC Networks | Part 2 | KVL | Question Type 2&3(Lecture 02)",
+              creator: "Umesh Dhande",
+              duration: const Duration(minutes: 41, seconds: 31),
+              url:
+                  "https://youtu.be/LdMXFW3d_Mw?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc"),
+        ],
+        position: 2,
+        subjectId: "601"),
   ];
 
   static List<dynamic> topFaculties = [

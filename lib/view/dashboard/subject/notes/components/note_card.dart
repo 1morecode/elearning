@@ -143,7 +143,6 @@ class NoteCard extends StatelessWidget {
                               Stream.fromIterable('Hello World!'.codeUnits);
                               download(stream, file.path);
                             }
-
                           } catch (e) {
                             print(e);
                           }

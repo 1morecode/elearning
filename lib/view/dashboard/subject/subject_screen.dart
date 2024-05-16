@@ -66,9 +66,9 @@ class _SubjectScreenState extends State<SubjectScreen>
         controller: tabController,
         children: [
           NotesScreen(subject: widget.subject,),
-          LecturesScreen(),
-          BooksScreen(),
-          PapersScreen(),
+          LecturesScreen(subject: widget.subject,),
+          BooksScreen(subject: widget.subject,),
+          PapersScreen(subject: widget.subject,),
         ],
       ),
     );
