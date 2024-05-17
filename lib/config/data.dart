@@ -306,7 +306,7 @@ class UniData {
               creator: "Umesh Dhande",
               duration: const Duration(minutes: 40, seconds: 36),
               url:
-                  "https://youtu.be/Vd2UJiIPbag?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc"),
+                  "https://assets.mixkit.co/videos/preview/mixkit-spinning-around-the-earth-29351-large.mp4"),
         ],
         position: 1,
         subjectId: "601"),
@@ -321,7 +321,7 @@ class UniData {
               creator: "Umesh Dhande",
               duration: const Duration(minutes: 41, seconds: 31),
               url:
-                  "https://youtu.be/FjaJEo7knF4?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc"),
+                  "https://assets.mixkit.co/videos/preview/mixkit-daytime-city-traffic-aerial-view-56-large.mp4"),
           VideoModel(
               thumbnail:
                   "https://i.ytimg.com/vi/LdMXFW3d_Mw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBwkCgoCXRbE6izutZU76sA_0m0pg",
@@ -331,7 +331,7 @@ class UniData {
               creator: "Umesh Dhande",
               duration: const Duration(minutes: 41, seconds: 31),
               url:
-                  "https://youtu.be/LdMXFW3d_Mw?list=PL9RcWoqXmzaLTYUdnzKhF4bYug3GjGcEc"),
+                  "https://assets.mixkit.co/videos/preview/mixkit-a-girl-blowing-a-bubble-gum-at-an-amusement-park-1226-large.mp4"),
         ],
         position: 2,
         subjectId: "601"),

@@ -2,6 +2,7 @@ import 'package:elearning/config/assets.dart';
 import 'package:elearning/view/dashboard/tabs/community/community_tab.dart';
 import 'package:elearning/view/dashboard/tabs/download/download_tab.dart';
 import 'package:elearning/view/dashboard/tabs/home/home_tab.dart';
+import 'package:elearning/view/dashboard/tabs/search/components/search_bar.dart';
 import 'package:elearning/view/dashboard/tabs/search/search_tab.dart';
 import 'package:elearning/view/dashboard/tabs/setting/setting_tab.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,7 +29,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   List<Widget> appbarTitles = [
     Image.asset(hrLogo, height: 40,),
     const Text("Download"),
-    const Text("Search"),
+    const SearchBarField(),
     const Text("Community"),
     const Text("Setting"),
   ];
