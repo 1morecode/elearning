@@ -379,6 +379,54 @@ class UniData {
           "M.tech (Computer Science) || Gold Medalist (Physics) || Prof. at BBD Group of Institutions"
     }
   ];
+
+  static List<dynamic> planList = [
+    {
+      "plan_name": "6 Months",
+      "price": 149,
+      "active": false,
+      "duration_name": "6 MONTH",
+      "colors": [Colors.blue.withOpacity(0.5), Colors.blue],
+      "duration": 6,
+      "plan_type": "VIP Membership",
+      "benefits": "Access Complete App without ads and restrictions."
+    },
+    {
+      "plan_name": "1 Year",
+      "price": 199,
+      "active": true,
+      "duration_name": "1 Year",
+      "colors": [Colors.orangeAccent.withOpacity(0.5), Colors.orangeAccent],
+      "duration": 12,
+      "plan_type": "VIP Membership",
+      "benefits": "Access Complete App without ads and restrictions."
+    },
+    {
+      "plan_name": "2 Year",
+      "price": 299,
+      "active": false,
+      "duration_name": "2 Year",
+      "colors": [Colors.green.withOpacity(0.5), Colors.green],
+      "duration": 24,
+      "plan_type": "VIP Membership",
+      "benefits": "Access Complete App without ads and restrictions.",
+      "answers": [
+        {
+          
+        }
+      ]
+    },
+    {
+      "plan_name": "4 Year",
+      "price": 499,
+      "active": false,
+      "duration_name": "4 Year",
+      "colors": [Colors.purple.withOpacity(0.5), Colors.purple],
+      "duration": 48,
+      "plan_type": "VIP Membership",
+      "benefits": "Access Complete App without ads and restrictions."
+    }
+  ];
 }
 
 Future<File?> urlToFile(String imageUrl) async {

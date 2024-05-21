@@ -2,6 +2,7 @@
 // Created by 1 More Code on 09/05/24.
 //
 
+import 'package:elearning/view/dashboard/tabs/setting/membership/membership_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -84,7 +85,9 @@ class _SettingTabState extends State<SettingTab> {
               child: const Text("Membership"),
             ),
             settingListItem(
-                title: 'VIP Membership', icon: CupertinoIcons.settings),
+                title: 'VIP Membership', icon: CupertinoIcons.settings, onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const MembershipScreen(),));
+            }),
             Container(
               width: MediaQuery.of(context).size.width,
               color: Colors.grey.withOpacity(0.2),
@@ -127,7 +130,7 @@ class _SettingTabState extends State<SettingTab> {
   }
 
   Widget settingListItem(
-      {required String title, required IconData icon, Widget? trailing}) {
+      {required String title, required IconData icon, Widget? trailing, Function? onTap}) {
     return Container(
       decoration: BoxDecoration(
           border: Border(
@@ -137,6 +140,9 @@ class _SettingTabState extends State<SettingTab> {
         onPressed: trailing != null
             ? null
             : () {
+                if(onTap != null){
+                  onTap();
+                }
                 // Navigator.push(context, MaterialPageRoute(builder: (context) => SubjectScreen(subject: subject,),));
                 // print("Subject Tapped");
               },
